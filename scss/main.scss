@@ -1,0 +1,364 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+@import 'reset';
+@import 'variables';
+@import 'buttons';
+
+
+body {
+    background: url("/images/bg-header-desktop.png") no-repeat top left/contain;
+    font-family: $font-family;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark-grayish-blue;
+}
+
+p {
+    color: $grayish-blue;
+    line-height: 1.4rem;
+}
+
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    img {
+        margin: 50px;
+    }
+
+    p {
+        width: 50%;
+        margin: 20px auto;
+    }
+}
+
+.features {
+    width: 100%;
+    margin: 0px auto;
+    padding: 50px 0;
+
+    &>p {
+        width: 40%;
+        margin: 20px auto;
+        font-size: .85rem;
+    }
+
+    .features-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 50px 0;
+        text-align: left;
+
+        img {
+            width: 60%;
+            margin-left: -50px;
+        }
+
+        .feature {
+            width: 55%;
+            margin: 20px;
+            padding: 10px;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+        }
+    }
+
+}
+
+.mobile {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    p {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    img {
+        width: auto;
+    }
+}
+
+
+.workflow {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    p {
+        margin: 20px auto;
+        line-height: 1.8rem;
+    }
+
+
+    .line {
+        width: 100%;
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-around;
+
+        &>div {
+            width: 300px;
+
+            h3 {
+                margin: 10px;
+                margin-top: 20px;
+            }
+        }
+
+        &>img {
+            height: auto;
+            align-self: center;
+        }
+
+
+    }
+}
+
+.downloads {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    p {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+}
+
+footer {
+    background-color: $grayish-blue;
+}
+
+.footer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .logo {
+        width: 50px;
+    }
+
+    &>div:not(:last-child) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+
+    }
+
+    &>div:nth-last-child(2) {
+        align-self: start;
+    }
+
+    a {
+        color: $dark-grayish-blue;
+        text-decoration: none;
+        font-size: .8rem;
+        transition: color .5s ease;
+
+        &:hover {
+            color: $strong-cyan;
+        }
+    }
+
+    .social-media {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        svg {
+            path {
+                fill: $dark-grayish-blue;
+                transition: fill .5s ease;
+            }
+
+            &:hover path {
+                fill: $strong-cyan;
+            }
+        }
+    }
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (max-width:375px) {
+    body {
+        background: url("/images/bg-header-mobile.png") no-repeat top left/contain;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    .main {
+        width: 90%;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            width: 100%;
+        }
+    }
+
+    .features {
+        width: 90%;
+
+        p {
+            width: 100%;
+        }
+
+        .features-wrapper {
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .feature {
+                width: 100%;
+                margin: auto;
+                padding: 10px;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+
+            }
+        }
+    }
+
+    .mobile {
+        width: 90%;
+
+        p {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .workflow {
+        width: 90%;
+
+        p {
+            width: 80%;
+        }
+
+        .line {
+            width: 100%;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            &>div {
+                width: 300px;
+
+                h3 {
+                    margin: 10px;
+                    margin-top: 20px;
+                }
+            }
+
+            &>img {
+                height: auto;
+                align-self: center;
+            }
+        }
+    }
+
+    .downloads {
+        width: 90%;
+
+        p {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        &>div:not(:last-child) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &>div:nth-last-child(2) {
+            align-self: center;
+        }
+
+        .social-media {
+            margin-left: 0;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            svg {
+                path {
+                    fill: $dark-grayish-blue;
+                    transition: fill .5s ease;
+                }
+
+                &:hover path {
+                    fill: $strong-cyan;
+                }
+            }
+        }
+
+    }
+
+
+    .btn {
+        width: 100%;
+    }
+}
